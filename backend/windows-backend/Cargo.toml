@@ -1,0 +1,10 @@
+[package]
+name = "prism_windows_backend"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"] # 必须编成动态库给 C# 用
+
+[dependencies]
+prism_shared = { path = "../shared" } # 复用 shared 逻辑
