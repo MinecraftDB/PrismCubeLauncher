@@ -18,10 +18,10 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
 import android.webkit.WebSettings
 import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewAssetLoader
-import androidx.webkit.WebViewClientCompat
 import androidx.webkit.WebViewFeature
 import org.json.JSONArray
 import org.json.JSONObject
@@ -120,7 +120,7 @@ class MainActivity : Activity() {
         }
     }
 
-    private inner class OreUIViewClient : WebViewClientCompat() {
+    private inner class OreUIViewClient : WebViewClient() {
         override fun shouldInterceptRequest(
             view: WebView,
             request: WebResourceRequest
